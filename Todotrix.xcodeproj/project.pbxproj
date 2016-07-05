@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C750E125AE692016C075232 /* Pods_Todotrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69AD8BA1264414AE81A609 /* Pods_Todotrix.framework */; };
+		A0E2F2E2F965CB52D0111A4B /* Pods_TodotrixTodayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B338CF17D8B661814AEEA9D /* Pods_TodotrixTodayExtension.framework */; };
 		B321784F1CF40471001DD171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321784E1CF40471001DD171 /* AppDelegate.swift */; };
 		B32178561CF40471001DD171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32178551CF40471001DD171 /* Assets.xcassets */; };
 		B32178591CF40471001DD171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32178571CF40471001DD171 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,9 @@
 		B3A68C891D2BB22700A158F3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C881D2BB22700A158F3 /* TodayViewController.swift */; };
 		B3A68C8C1D2BB22700A158F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A68C8A1D2BB22700A158F3 /* MainInterface.storyboard */; };
 		B3A68C901D2BB22700A158F3 /* TodotrixTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B3A68C841D2BB22700A158F3 /* TodotrixTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B3A68C961D2BB71000A158F3 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321787B1CF4313F001DD171 /* Todo.swift */; };
+		B3A68C971D2BB71000A158F3 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C5E1D2A4F4000A158F3 /* TodoService.swift */; };
+		B3A68C981D2BBB2E00A158F3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178621CF428C0001DD171 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +67,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B338CF17D8B661814AEEA9D /* Pods_TodotrixTodayExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodotrixTodayExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E69AD8BA1264414AE81A609 /* Pods_Todotrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todotrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC3B499A67BFD82D859B46A /* Pods-TodotrixTodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodotrixTodayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodotrixTodayExtension/Pods-TodotrixTodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		A180AA8BAF3532C7BE2BE41B /* Pods-Todotrix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todotrix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix.debug.xcconfig"; sourceTree = "<group>"; };
+		A39A7119C2FDCF59D45B59AC /* Pods-TodotrixTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodotrixTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodotrixTodayExtension/Pods-TodotrixTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		B321784B1CF40471001DD171 /* Todotrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todotrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B321784E1CF40471001DD171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32178551CF40471001DD171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A68C861D2BB22700A158F3 /* NotificationCenter.framework in Frameworks */,
+				A0E2F2E2F965CB52D0111A4B /* Pods_TodotrixTodayExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +136,8 @@
 			children = (
 				A180AA8BAF3532C7BE2BE41B /* Pods-Todotrix.debug.xcconfig */,
 				E3F805A43EFD7EC07703F47A /* Pods-Todotrix.release.xcconfig */,
+				4CC3B499A67BFD82D859B46A /* Pods-TodotrixTodayExtension.debug.xcconfig */,
+				A39A7119C2FDCF59D45B59AC /* Pods-TodotrixTodayExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 			children = (
 				3E69AD8BA1264414AE81A609 /* Pods_Todotrix.framework */,
 				B3A68C851D2BB22700A158F3 /* NotificationCenter.framework */,
+				3B338CF17D8B661814AEEA9D /* Pods_TodotrixTodayExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -278,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3A68C911D2BB22700A158F3 /* Build configuration list for PBXNativeTarget "TodotrixTodayExtension" */;
 			buildPhases = (
+				1F0DFBDDF6ED17F4F3A81497 /* 📦 Check Pods Manifest.lock */,
 				B3A68C801D2BB22700A158F3 /* Sources */,
 				B3A68C811D2BB22700A158F3 /* Frameworks */,
 				B3A68C821D2BB22700A158F3 /* Resources */,
+				454CEBE775D046A3A99D41A7 /* 📦 Embed Pods Frameworks */,
+				8859D49DAB501A4CE3E923BD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,6 +378,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F0DFBDDF6ED17F4F3A81497 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		454CEBE775D046A3A99D41A7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodotrixTodayExtension/Pods-TodotrixTodayExtension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		75AE1FF66ECAA172B2E26093 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +421,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8859D49DAB501A4CE3E923BD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodotrixTodayExtension/Pods-TodotrixTodayExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		94CDB73BABD48F99EFCEB8CE /* 📦 Embed Pods Frameworks */ = {
@@ -469,7 +528,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A68C971D2BB71000A158F3 /* TodoService.swift in Sources */,
+				B3A68C981D2BBB2E00A158F3 /* UIColor.swift in Sources */,
 				B3A68C891D2BB22700A158F3 /* TodayViewController.swift in Sources */,
+				B3A68C961D2BB71000A158F3 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +692,7 @@
 		};
 		B3A68C921D2BB22700A158F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CC3B499A67BFD82D859B46A /* Pods-TodotrixTodayExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodotrixTodayExtension/TodotrixTodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -644,6 +707,7 @@
 		};
 		B3A68C931D2BB22700A158F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39A7119C2FDCF59D45B59AC /* Pods-TodotrixTodayExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TodotrixTodayExtension/TodotrixTodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -684,6 +748,7 @@
 				B3A68C931D2BB22700A158F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
