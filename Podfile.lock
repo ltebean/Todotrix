@@ -1,0 +1,48 @@
+PODS:
+  - Crashlytics (3.7.2):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
+  - HPReorderTableView (0.2)
+  - LTSwiftDate (0.1.0)
+  - LTUIKit (0.1.0)
+  - pop (1.0.9)
+  - R.swift (2.1.0):
+    - R.swift.Library (~> 2.0.0)
+  - R.swift.Library (2.0.0)
+  - Realm (1.0.1):
+    - Realm/Headers (= 1.0.1)
+  - Realm/Headers (1.0.1)
+  - RealmSwift (1.0.1):
+    - Realm (= 1.0.1)
+  - TextAttributes (0.3)
+  - VBFPopFlatButton (0.0.7):
+    - pop
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - HPReorderTableView
+  - LTSwiftDate
+  - LTUIKit
+  - R.swift (= 2.1.0)
+  - RealmSwift (= 1.0.1)
+  - TextAttributes
+  - VBFPopFlatButton
+
+SPEC CHECKSUMS:
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  HPReorderTableView: fbecadc7f8b2d5a138d976aa5fe6fbb09524022a
+  LTSwiftDate: 7f456e301ea7426a3d0e4afac85a3fd82f3a171f
+  LTUIKit: a2ea10f50d780c81e8f1defd9f646b874ae2da6f
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
+  R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
+  Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
+  RealmSwift: d73ea2af08c3676dbdd5e4b669651a0f492162a4
+  TextAttributes: 34f7560fad65c8fede4edd3a7c0ca444971226fd
+  VBFPopFlatButton: 39e48ab56277f3d056734a9b5ec5d0cc60d69778
+
+PODFILE CHECKSUM: 47ad613c99875b76ee159d464dfbbebfc49a5ef0
+
+COCOAPODS: 1.0.0

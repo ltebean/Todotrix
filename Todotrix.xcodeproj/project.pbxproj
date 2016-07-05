@@ -7,21 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C750E125AE692016C075232 /* Pods_Todotrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E69AD8BA1264414AE81A609 /* Pods_Todotrix.framework */; };
 		B321784F1CF40471001DD171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321784E1CF40471001DD171 /* AppDelegate.swift */; };
-		B32178511CF40471001DD171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178501CF40471001DD171 /* ViewController.swift */; };
-		B32178541CF40471001DD171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32178521CF40471001DD171 /* Main.storyboard */; };
 		B32178561CF40471001DD171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32178551CF40471001DD171 /* Assets.xcassets */; };
 		B32178591CF40471001DD171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32178571CF40471001DD171 /* LaunchScreen.storyboard */; };
+		B32178641CF428C0001DD171 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178611CF428C0001DD171 /* FileManager.swift */; };
+		B32178651CF428C0001DD171 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178621CF428C0001DD171 /* UIColor.swift */; };
+		B32178661CF428C0001DD171 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178631CF428C0001DD171 /* UIFont.swift */; };
+		B32178681CF428CA001DD171 /* XibBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178671CF428CA001DD171 /* XibBasedView.swift */; };
+		B321786B1CF428E4001DD171 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B321786A1CF428E4001DD171 /* Raleway-Regular.ttf */; };
+		B321786D1CF428F2001DD171 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321786C1CF428F2001DD171 /* R.generated.swift */; };
+		B321786F1CF42921001DD171 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321786E1CF42921001DD171 /* NavigationController.swift */; };
+		B32178721CF42954001DD171 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32178711CF42954001DD171 /* Home.storyboard */; };
+		B32178741CF42963001DD171 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178731CF42963001DD171 /* HomeViewController.swift */; };
+		B32178771CF42D34001DD171 /* RoundCornerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178761CF42D34001DD171 /* RoundCornerLabel.swift */; };
+		B32178791CF430C4001DD171 /* TodoAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178781CF430C4001DD171 /* TodoAreaView.swift */; };
+		B321787C1CF4313F001DD171 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321787B1CF4313F001DD171 /* Todo.swift */; };
+		B3A68C5D1D2A425B00A158F3 /* TodoAreaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A68C5C1D2A425B00A158F3 /* TodoAreaView.xib */; };
+		B3A68C5F1D2A4F4000A158F3 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C5E1D2A4F4000A158F3 /* TodoService.swift */; };
+		B3A68C611D2A57DB00A158F3 /* TodoInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C601D2A57DB00A158F3 /* TodoInputViewController.swift */; };
+		B3A68C631D2A612900A158F3 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C621D2A612900A158F3 /* TodoListViewController.swift */; };
+		B3A68C651D2A631300A158F3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C641D2A631300A158F3 /* String.swift */; };
+		B3A68C711D2B57D400A158F3 /* HomeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C701D2B57D400A158F3 /* HomeTransition.swift */; };
+		B3A68C781D2B9A5F00A158F3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C771D2B9A5F00A158F3 /* UIView.swift */; };
+		B3A68C7A1D2B9C4D00A158F3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C791D2B9C4D00A158F3 /* SettingsViewController.swift */; };
+		B3A68C7E1D2BA7FB00A158F3 /* OldTodoService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C7D1D2BA7FB00A158F3 /* OldTodoService.m */; };
+		B3A68C861D2BB22700A158F3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A68C851D2BB22700A158F3 /* NotificationCenter.framework */; };
+		B3A68C891D2BB22700A158F3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C881D2BB22700A158F3 /* TodayViewController.swift */; };
+		B3A68C8C1D2BB22700A158F3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A68C8A1D2BB22700A158F3 /* MainInterface.storyboard */; };
+		B3A68C901D2BB22700A158F3 /* TodotrixTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B3A68C841D2BB22700A158F3 /* TodotrixTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B3A68C8E1D2BB22700A158F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32178431CF40471001DD171 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3A68C831D2BB22700A158F3;
+			remoteInfo = TodotrixTodayExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3A68C941D2BB22700A158F3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B3A68C901D2BB22700A158F3 /* TodotrixTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3E69AD8BA1264414AE81A609 /* Pods_Todotrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todotrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A180AA8BAF3532C7BE2BE41B /* Pods-Todotrix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todotrix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix.debug.xcconfig"; sourceTree = "<group>"; };
 		B321784B1CF40471001DD171 /* Todotrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todotrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B321784E1CF40471001DD171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B32178501CF40471001DD171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B32178531CF40471001DD171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B32178551CF40471001DD171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32178581CF40471001DD171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B321785A1CF40471001DD171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32178611CF428C0001DD171 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		B32178621CF428C0001DD171 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B32178631CF428C0001DD171 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		B32178671CF428CA001DD171 /* XibBasedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibBasedView.swift; sourceTree = "<group>"; };
+		B321786A1CF428E4001DD171 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		B321786C1CF428F2001DD171 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		B321786E1CF42921001DD171 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B32178711CF42954001DD171 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B32178731CF42963001DD171 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B32178761CF42D34001DD171 /* RoundCornerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCornerLabel.swift; sourceTree = "<group>"; };
+		B32178781CF430C4001DD171 /* TodoAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoAreaView.swift; sourceTree = "<group>"; };
+		B321787B1CF4313F001DD171 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		B3A68C5C1D2A425B00A158F3 /* TodoAreaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodoAreaView.xib; sourceTree = "<group>"; };
+		B3A68C5E1D2A4F4000A158F3 /* TodoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoService.swift; sourceTree = "<group>"; };
+		B3A68C601D2A57DB00A158F3 /* TodoInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoInputViewController.swift; sourceTree = "<group>"; };
+		B3A68C621D2A612900A158F3 /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		B3A68C641D2A631300A158F3 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B3A68C701D2B57D400A158F3 /* HomeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTransition.swift; sourceTree = "<group>"; };
+		B3A68C731D2B92CB00A158F3 /* Todotrix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Todotrix-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3A68C771D2B9A5F00A158F3 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B3A68C791D2B9C4D00A158F3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B3A68C7B1D2BA5E200A158F3 /* Todotrix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Todotrix.entitlements; sourceTree = "<group>"; };
+		B3A68C7C1D2BA7FB00A158F3 /* OldTodoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldTodoService.h; sourceTree = "<group>"; };
+		B3A68C7D1D2BA7FB00A158F3 /* OldTodoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldTodoService.m; sourceTree = "<group>"; };
+		B3A68C841D2BB22700A158F3 /* TodotrixTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodotrixTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3A68C851D2BB22700A158F3 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B3A68C881D2BB22700A158F3 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B3A68C8B1D2BB22700A158F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B3A68C8D1D2BB22700A158F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3A68C951D2BB26D00A158F3 /* TodotrixTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TodotrixTodayExtension.entitlements; sourceTree = "<group>"; };
+		E3F805A43EFD7EC07703F47A /* Pods-Todotrix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todotrix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +108,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C750E125AE692016C075232 /* Pods_Todotrix.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A68C811D2BB22700A158F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3A68C861D2BB22700A158F3 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		382CEB1A4BF628C583FC0895 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A180AA8BAF3532C7BE2BE41B /* Pods-Todotrix.debug.xcconfig */,
+				E3F805A43EFD7EC07703F47A /* Pods-Todotrix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9777E87D6D8920B4D99D75A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E69AD8BA1264414AE81A609 /* Pods_Todotrix.framework */,
+				B3A68C851D2BB22700A158F3 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B32178421CF40471001DD171 = {
 			isa = PBXGroup;
 			children = (
 				B321784D1CF40471001DD171 /* Todotrix */,
+				B3A68C871D2BB22700A158F3 /* TodotrixTodayExtension */,
 				B321784C1CF40471001DD171 /* Products */,
+				382CEB1A4BF628C583FC0895 /* Pods */,
+				9777E87D6D8920B4D99D75A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B321784B1CF40471001DD171 /* Todotrix.app */,
+				B3A68C841D2BB22700A158F3 /* TodotrixTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +164,87 @@
 		B321784D1CF40471001DD171 /* Todotrix */ = {
 			isa = PBXGroup;
 			children = (
+				B3A68C7B1D2BA5E200A158F3 /* Todotrix.entitlements */,
+				B3A68C721D2B92C200A158F3 /* oc */,
+				B321786C1CF428F2001DD171 /* R.generated.swift */,
+				B32178691CF428D1001DD171 /* Resources */,
+				B321787A1CF43121001DD171 /* Service */,
+				B32178601CF428A1001DD171 /* Foundation */,
+				B32178701CF42945001DD171 /* Home */,
 				B321784E1CF40471001DD171 /* AppDelegate.swift */,
-				B32178501CF40471001DD171 /* ViewController.swift */,
-				B32178521CF40471001DD171 /* Main.storyboard */,
 				B32178551CF40471001DD171 /* Assets.xcassets */,
 				B32178571CF40471001DD171 /* LaunchScreen.storyboard */,
 				B321785A1CF40471001DD171 /* Info.plist */,
 			);
 			path = Todotrix;
+			sourceTree = "<group>";
+		};
+		B32178601CF428A1001DD171 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B321786E1CF42921001DD171 /* NavigationController.swift */,
+				B32178671CF428CA001DD171 /* XibBasedView.swift */,
+				B32178611CF428C0001DD171 /* FileManager.swift */,
+				B32178621CF428C0001DD171 /* UIColor.swift */,
+				B32178631CF428C0001DD171 /* UIFont.swift */,
+				B32178761CF42D34001DD171 /* RoundCornerLabel.swift */,
+				B3A68C641D2A631300A158F3 /* String.swift */,
+				B3A68C771D2B9A5F00A158F3 /* UIView.swift */,
+			);
+			name = Foundation;
+			sourceTree = "<group>";
+		};
+		B32178691CF428D1001DD171 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B321786A1CF428E4001DD171 /* Raleway-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B32178701CF42945001DD171 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B32178711CF42954001DD171 /* Home.storyboard */,
+				B32178731CF42963001DD171 /* HomeViewController.swift */,
+				B3A68C601D2A57DB00A158F3 /* TodoInputViewController.swift */,
+				B3A68C621D2A612900A158F3 /* TodoListViewController.swift */,
+				B32178781CF430C4001DD171 /* TodoAreaView.swift */,
+				B3A68C5C1D2A425B00A158F3 /* TodoAreaView.xib */,
+				B3A68C701D2B57D400A158F3 /* HomeTransition.swift */,
+				B3A68C791D2B9C4D00A158F3 /* SettingsViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		B321787A1CF43121001DD171 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B321787B1CF4313F001DD171 /* Todo.swift */,
+				B3A68C5E1D2A4F4000A158F3 /* TodoService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		B3A68C721D2B92C200A158F3 /* oc */ = {
+			isa = PBXGroup;
+			children = (
+				B3A68C7C1D2BA7FB00A158F3 /* OldTodoService.h */,
+				B3A68C7D1D2BA7FB00A158F3 /* OldTodoService.m */,
+				B3A68C731D2B92CB00A158F3 /* Todotrix-Bridging-Header.h */,
+			);
+			name = oc;
+			sourceTree = "<group>";
+		};
+		B3A68C871D2BB22700A158F3 /* TodotrixTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B3A68C951D2BB26D00A158F3 /* TodotrixTodayExtension.entitlements */,
+				B3A68C881D2BB22700A158F3 /* TodayViewController.swift */,
+				B3A68C8A1D2BB22700A158F3 /* MainInterface.storyboard */,
+				B3A68C8D1D2BB22700A158F3 /* Info.plist */,
+			);
+			path = TodotrixTodayExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,18 +254,42 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B321785D1CF40471001DD171 /* Build configuration list for PBXNativeTarget "Todotrix" */;
 			buildPhases = (
+				9B9237A4A5664A89B9587B50 /* 📦 Check Pods Manifest.lock */,
+				B32178751CF429B6001DD171 /* R.swift */,
 				B32178471CF40471001DD171 /* Sources */,
 				B32178481CF40471001DD171 /* Frameworks */,
 				B32178491CF40471001DD171 /* Resources */,
+				B3A68C7F1D2BAD0000A158F3 /* ShellScript */,
+				94CDB73BABD48F99EFCEB8CE /* 📦 Embed Pods Frameworks */,
+				75AE1FF66ECAA172B2E26093 /* 📦 Copy Pods Resources */,
+				B3A68C941D2BB22700A158F3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B3A68C8F1D2BB22700A158F3 /* PBXTargetDependency */,
 			);
 			name = Todotrix;
 			productName = Todotrix;
 			productReference = B321784B1CF40471001DD171 /* Todotrix.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B3A68C831D2BB22700A158F3 /* TodotrixTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3A68C911D2BB22700A158F3 /* Build configuration list for PBXNativeTarget "TodotrixTodayExtension" */;
+			buildPhases = (
+				B3A68C801D2BB22700A158F3 /* Sources */,
+				B3A68C811D2BB22700A158F3 /* Frameworks */,
+				B3A68C821D2BB22700A158F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodotrixTodayExtension;
+			productName = TodotrixTodayExtension;
+			productReference = B3A68C841D2BB22700A158F3 /* TodotrixTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +303,21 @@
 				TargetAttributes = {
 					B321784A1CF40471001DD171 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LUAG5Z5ST3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B3A68C831D2BB22700A158F3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LUAG5Z5ST3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -113,6 +335,7 @@
 			projectRoot = "";
 			targets = (
 				B321784A1CF40471001DD171 /* Todotrix */,
+				B3A68C831D2BB22700A158F3 /* TodotrixTodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -123,40 +346,158 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32178591CF40471001DD171 /* LaunchScreen.storyboard in Resources */,
+				B3A68C5D1D2A425B00A158F3 /* TodoAreaView.xib in Resources */,
+				B32178721CF42954001DD171 /* Home.storyboard in Resources */,
 				B32178561CF40471001DD171 /* Assets.xcassets in Resources */,
-				B32178541CF40471001DD171 /* Main.storyboard in Resources */,
+				B321786B1CF428E4001DD171 /* Raleway-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A68C821D2BB22700A158F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3A68C8C1D2BB22700A158F3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75AE1FF66ECAA172B2E26093 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94CDB73BABD48F99EFCEB8CE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B9237A4A5664A89B9587B50 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B32178751CF429B6001DD171 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/R.swift/rswift\" \"${SRCROOT}/Todotrix/\"";
+		};
+		B3A68C7F1D2BAD0000A158F3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f76e439b5fd9873bfe46a5461fc749ec526ee446 5721cf137a323472424a2a4705339158372d733d0538a90a766e395a14814f1d";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B32178471CF40471001DD171 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32178511CF40471001DD171 /* ViewController.swift in Sources */,
+				B321787C1CF4313F001DD171 /* Todo.swift in Sources */,
+				B3A68C611D2A57DB00A158F3 /* TodoInputViewController.swift in Sources */,
+				B32178641CF428C0001DD171 /* FileManager.swift in Sources */,
+				B3A68C711D2B57D400A158F3 /* HomeTransition.swift in Sources */,
+				B321786F1CF42921001DD171 /* NavigationController.swift in Sources */,
+				B3A68C5F1D2A4F4000A158F3 /* TodoService.swift in Sources */,
+				B3A68C7E1D2BA7FB00A158F3 /* OldTodoService.m in Sources */,
+				B321786D1CF428F2001DD171 /* R.generated.swift in Sources */,
+				B32178651CF428C0001DD171 /* UIColor.swift in Sources */,
+				B32178741CF42963001DD171 /* HomeViewController.swift in Sources */,
+				B3A68C631D2A612900A158F3 /* TodoListViewController.swift in Sources */,
+				B32178661CF428C0001DD171 /* UIFont.swift in Sources */,
+				B32178681CF428CA001DD171 /* XibBasedView.swift in Sources */,
+				B32178771CF42D34001DD171 /* RoundCornerLabel.swift in Sources */,
+				B3A68C781D2B9A5F00A158F3 /* UIView.swift in Sources */,
+				B3A68C651D2A631300A158F3 /* String.swift in Sources */,
 				B321784F1CF40471001DD171 /* AppDelegate.swift in Sources */,
+				B32178791CF430C4001DD171 /* TodoAreaView.swift in Sources */,
+				B3A68C7A1D2B9C4D00A158F3 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A68C801D2BB22700A158F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3A68C891D2BB22700A158F3 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		B32178521CF40471001DD171 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B32178531CF40471001DD171 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		B3A68C8F1D2BB22700A158F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3A68C831D2BB22700A158F3 /* TodotrixTodayExtension */;
+			targetProxy = B3A68C8E1D2BB22700A158F3 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		B32178571CF40471001DD171 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B32178581CF40471001DD171 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B3A68C8A1D2BB22700A158F3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3A68C8B1D2BB22700A158F3 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -247,23 +588,71 @@
 		};
 		B321785E1CF40471001DD171 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A180AA8BAF3532C7BE2BE41B /* Pods-Todotrix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Todotrix/Todotrix.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Todotrix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.Todotrix;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"DEBUG\"";
+				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Todotrix/Todotrix-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B321785F1CF40471001DD171 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F805A43EFD7EC07703F47A /* Pods-Todotrix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Todotrix/Todotrix.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Todotrix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.Todotrix;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Todotrix/Todotrix-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		B3A68C921D2BB22700A158F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodotrixTodayExtension/TodotrixTodayExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TodotrixTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo.Todotrix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B3A68C931D2BB22700A158F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodotrixTodayExtension/TodotrixTodayExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TodotrixTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo.Todotrix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -284,6 +673,15 @@
 			buildConfigurations = (
 				B321785E1CF40471001DD171 /* Debug */,
 				B321785F1CF40471001DD171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3A68C911D2BB22700A158F3 /* Build configuration list for PBXNativeTarget "TodotrixTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3A68C921D2BB22700A158F3 /* Debug */,
+				B3A68C931D2BB22700A158F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

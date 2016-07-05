@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TodotrixTodayExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>B321784A1CF40471001DD171</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B3A68C831D2BB22700A158F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
