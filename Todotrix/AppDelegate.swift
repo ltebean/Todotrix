@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
             print("debug")
         #else
-            print("release")
             Fabric.with([Crashlytics.self])
         #endif
         return true
