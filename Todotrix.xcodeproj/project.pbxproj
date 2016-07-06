@@ -294,7 +294,6 @@
 				B3A68C811D2BB22700A158F3 /* Frameworks */,
 				B3A68C821D2BB22700A158F3 /* Resources */,
 				8859D49DAB501A4CE3E923BD /* 📦 Copy Pods Resources */,
-				F9BEB700628BE68A505F598D /* 📦 Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -479,21 +478,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" f76e439b5fd9873bfe46a5461fc749ec526ee446 5721cf137a323472424a2a4705339158372d733d0538a90a766e395a14814f1d";
-		};
-		F9BEB700628BE68A505F598D /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodotrixTodayExtension/Pods-TodotrixTodayExtension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
