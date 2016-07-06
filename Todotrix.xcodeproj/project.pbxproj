@@ -293,7 +293,6 @@
 				B3A68C801D2BB22700A158F3 /* Sources */,
 				B3A68C811D2BB22700A158F3 /* Frameworks */,
 				B3A68C821D2BB22700A158F3 /* Resources */,
-				454CEBE775D046A3A99D41A7 /* 📦 Embed Pods Frameworks */,
 				8859D49DAB501A4CE3E923BD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
@@ -391,21 +390,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		454CEBE775D046A3A99D41A7 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodotrixTodayExtension/Pods-TodotrixTodayExtension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75AE1FF66ECAA172B2E26093 /* 📦 Copy Pods Resources */ = {
@@ -677,15 +661,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Todotrix/Todotrix.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Todotrix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bb82dcab-7dfb-4430-b539-957bcd060888";
 				SWIFT_OBJC_BRIDGING_HEADER = "Todotrix/Todotrix-Bridging-Header.h";
 			};
 			name = Release;
@@ -694,13 +678,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CC3B499A67BFD82D859B46A /* Pods-TodotrixTodayExtension.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TodotrixTodayExtension/TodotrixTodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = TodotrixTodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo.Todotrix;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -709,13 +697,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A39A7119C2FDCF59D45B59AC /* Pods-TodotrixTodayExtension.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TodotrixTodayExtension/TodotrixTodayExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = TodotrixTodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo.Todotrix;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "23872f4f-48e4-426e-ad43-15f19eb3b1f2";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -39,6 +39,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             }
         })
         tableView.reloadData()
+        
+        preferredContentSize = tableView.contentSize
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,17 +74,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
         let label = UILabel(frame: CGRectMake(0, 0, 200, 20))
         label.textColor = UIColor.primaryColor()
         label.font = UIFont.systemFontOfSize(14)
-        let type = data[section].type
-        switch type {
-        case .ImportantAndUrgent:
-            label.text = "Important & Urgent"
-        case .Important:
-            label.text = "Important"
-        case .Urgent:
-            label.text = "Urgent"
-        case .Other:
-            label.text = "Other"
-        }
+        label.text = data[section].type.description()
         return label
     }
     

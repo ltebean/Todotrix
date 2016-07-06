@@ -16,6 +16,19 @@ class Todo: Object {
         case Important = 2
         case Urgent = 3
         case Other = 4
+        
+        func description() -> String {
+            switch self {
+            case .ImportantAndUrgent:
+                return "Important & Urgent"
+            case .Important:
+                return "Important"
+            case .Urgent:
+                return "Urgent"
+            case .Other:
+                return "Other"
+            }
+        }
     }
     
     dynamic var uuid: String = NSUUID().UUIDString

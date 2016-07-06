@@ -221,16 +221,7 @@ extension HomeViewController {
     func goToList(todoType: Todo.TodoType, todos: [Todo]) {
         let vc = R.storyboard.home.list()!
         vc.todos = todos
-        switch todoType {
-        case .ImportantAndUrgent:
-            vc.title = "Important & Urgent"
-        case .Important:
-            vc.title = "Important"
-        case .Urgent:
-            vc.title = "Urgent"
-        case .Other:
-            vc.title = "Other"
-        }
+        vc.title = todoType.description()
         navigationController?.pushViewController(vc, animated: true)
     }
     
