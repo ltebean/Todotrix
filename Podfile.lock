@@ -2,12 +2,10 @@ PODS:
   - Crashlytics (3.7.2):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
+  - Heap (3.0.0)
   - HPReorderTableView (0.2)
   - LTSwiftDate (0.1.0)
   - LTUIKit (0.1.0)
-  - Mixpanel (3.0.0):
-    - Mixpanel/Mixpanel (= 3.0.0)
-  - Mixpanel/Mixpanel (3.0.0)
   - pop (1.0.9)
   - R.swift (2.1.0):
     - R.swift.Library (~> 2.0.0)
@@ -24,10 +22,10 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - Heap
   - HPReorderTableView
   - LTSwiftDate
   - LTUIKit
-  - Mixpanel
   - R.swift (= 2.1.0)
   - RealmSwift (= 1.0.1)
   - TextAttributes
@@ -36,10 +34,10 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Heap: b95bc7a21f47ddd470e8ebccefa59c91f4fe1d68
   HPReorderTableView: fbecadc7f8b2d5a138d976aa5fe6fbb09524022a
   LTSwiftDate: 7f456e301ea7426a3d0e4afac85a3fd82f3a171f
   LTUIKit: a2ea10f50d780c81e8f1defd9f646b874ae2da6f
-  Mixpanel: ac92056ee35a961362513ba11049e67cffcaa1f1
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
   R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
@@ -48,6 +46,6 @@ SPEC CHECKSUMS:
   TextAttributes: 34f7560fad65c8fede4edd3a7c0ca444971226fd
   VBFPopFlatButton: 39e48ab56277f3d056734a9b5ec5d0cc60d69778
 
-PODFILE CHECKSUM: 1c420bec4b587a595e9fbc6ae37dbd25698bdfb9
+PODFILE CHECKSUM: 7e314b12db98d848c8b89e739a54327be8ec009e
 
 COCOAPODS: 1.0.0

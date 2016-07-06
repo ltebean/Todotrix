@@ -10,7 +10,6 @@ import UIKit
 import TextAttributes
 import Fabric
 import Crashlytics
-import Mixpanel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,13 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         setupAppearance()
-        let mixpanel = Mixpanel.sharedInstanceWithToken("3012f37476a823172582224265be11a1")
-        
         initFirstUseData()
         migrateData()
         #if DEBUG
+            Heap.setAppId("3339992518")
+            Heap.enableVisualizer()
             print("debug")
         #else
+            Heap.setAppId("56976480")
             Fabric.with([Crashlytics.self])
         #endif
         return true

@@ -7,6 +7,7 @@
 //
 
 #import "OldTodoService.h"
+#import "Heap.h"
 #define fm [NSFileManager defaultManager]
 
 @implementation OldTodoService
