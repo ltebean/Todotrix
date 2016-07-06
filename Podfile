@@ -13,6 +13,7 @@ pod 'HPReorderTableView'
 pod 'VBFPopFlatButton'
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'Mixpanel'
 end
 
 target 'TodotrixTodayExtension' do
