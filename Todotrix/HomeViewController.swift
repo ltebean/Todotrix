@@ -170,8 +170,7 @@ extension HomeViewController {
                 let contains = area.frame.contains(location)
                 area.setHighlighted(contains)
                 UIView.animateWithDuration(0.3, animations: {
-                    let alpha: CGFloat = contains ? 0 : 1
-                    area.titleLabel.alpha = alpha
+                    area.titleLabel.alpha = contains ? 0 : 1
                 })
             })
             snapshotView.center.x = location.x - startLocation.x + startCenter.x
@@ -209,7 +208,6 @@ extension HomeViewController {
     
     func showInput() {
         inputButton.animateToType(FlatButtonType.buttonCloseType)
-
         let vc = R.storyboard.home.input()!
         vc.presentInViewController(self)
         vc.willDismiss = {

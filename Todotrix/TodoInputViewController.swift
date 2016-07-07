@@ -53,16 +53,16 @@ class TodoInputViewController: UIViewController {
         
         super.viewWillAppear(animated)
         
-        importantButton.transform = CGAffineTransformMakeScale(0, 0)
-        urgentButton.transform = CGAffineTransformMakeScale(0, 0)
+        importantButton.scale = 0
+        urgentButton.scale = 0
 
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
             self.containerView.transform.ty = 0
         }, completion: nil)
         
         UIView.animateWithDuration(0.5, delay: 0.15, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
-            self.importantButton.transform = CGAffineTransformMakeScale(1, 1)
-            self.urgentButton.transform = CGAffineTransformMakeScale(1, 1)
+            self.importantButton.scale = 1
+            self.urgentButton.scale = 1
         }, completion: nil)
     }
     
@@ -91,7 +91,6 @@ class TodoInputViewController: UIViewController {
 
     
     func presentInViewController(viewController: UIViewController) {
-        modalTransitionStyle = .CrossDissolve
         modalPresentationStyle = .Custom
         viewController.presentViewController(self, animated: false, completion: {})
     }
