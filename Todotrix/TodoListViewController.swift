@@ -23,11 +23,6 @@ class TodoCell: UITableViewCell {
         titleLabel.attributedText = todo.text.title()
     }
     
-    
-    static func heightForTodo(todo: Todo) -> CGFloat {
-        let height = todo.text.title().heightWithConstrainedWidth(UIScreen.mainScreen().bounds.width - 30)
-        return max(height + 30, 60)
-    }
 }
 
 
@@ -43,7 +38,8 @@ class TodoListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        // Do any additional setup after loading the view.
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -68,10 +64,6 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.todo = todos[indexPath.row]
         cell.showsReorderControl = false
         return cell
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return TodoCell.heightForTodo(todos[indexPath.row])
     }
     
 
