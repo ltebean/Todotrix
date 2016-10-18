@@ -42,7 +42,7 @@ class TodoListViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
@@ -51,44 +51,44 @@ class TodoListViewController: UIViewController {
 
 extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todos.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TodoCell
-        cell.todo = todos[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoCell
+        cell.todo = todos[(indexPath as NSIndexPath).row]
         cell.showsReorderControl = false
         return cell
     }
     
 
     
-    func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-        let todo = todos[fromIndexPath.row]
-        todos.removeAtIndex(fromIndexPath.row)
-        todos.insert(todo, atIndex: toIndexPath.row)
+    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
+        let todo = todos[(fromIndexPath as NSIndexPath).row]
+        todos.remove(at: (fromIndexPath as NSIndexPath).row)
+        todos.insert(todo, at: (toIndexPath as NSIndexPath).row)
         service.resetOrder(todos)
     }
     
     
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let finish = UITableViewRowAction(style: .Normal, title: "Finish") { [weak self] (action, indexPath) in
-            let todo = self?.todos[indexPath.row]
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let finish = UITableViewRowAction(style: .normal, title: "Finish") { [weak self] (action, indexPath) in
+            let todo = self?.todos[(indexPath as NSIndexPath).row]
             self?.service.deleteTodo(todo!)
-            self?.todos.removeAtIndex(indexPath.row)
-            self?.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            self?.todos.remove(at: (indexPath as NSIndexPath).row)
+            self?.tableView.deleteRows(at: [indexPath], with: .fade)
         }
         finish.backgroundColor = UIColor.primaryColor()
         return [finish]
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let todo = todos[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todo = todos[(indexPath as NSIndexPath).row]
         goToEditor(todo)
     }
     
@@ -96,7 +96,7 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension TodoListViewController {
     
-    func goToEditor(todo: Todo) {
+    func goToEditor(_ todo: Todo) {
         let vc = R.storyboard.home.input()!
         vc.todo = todo
         vc.willDismiss = {

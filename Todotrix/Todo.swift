@@ -12,32 +12,32 @@ import RealmSwift
 class Todo: Object {
     
     enum TodoType: Int {
-        case ImportantAndUrgent = 1
-        case Important = 2
-        case Urgent = 3
-        case Other = 4
+        case importantAndUrgent = 1
+        case important = 2
+        case urgent = 3
+        case other = 4
         
         func description() -> String {
             switch self {
-            case .ImportantAndUrgent:
+            case .importantAndUrgent:
                 return "Important & Urgent"
-            case .Important:
+            case .important:
                 return "Important"
-            case .Urgent:
+            case .urgent:
                 return "Urgent"
-            case .Other:
+            case .other:
                 return "Other"
             }
         }
     }
     
-    dynamic var uuid: String = NSUUID().UUIDString
+    dynamic var uuid: String = UUID().uuidString
 
-    dynamic var type = TodoType.Other.rawValue
+    dynamic var type = TodoType.other.rawValue
     dynamic var text = ""
-    dynamic var order = Int(NSDate().timeIntervalSince1970)
-    dynamic var timeCreated = NSDate()
-    dynamic var timeFinished: NSDate?
+    dynamic var order = Int(Date().timeIntervalSince1970)
+    dynamic var timeCreated = Date()
+    dynamic var timeFinished: Date?
     
     override static func primaryKey() -> String? {
         return "uuid"

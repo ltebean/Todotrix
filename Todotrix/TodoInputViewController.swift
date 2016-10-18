@@ -30,7 +30,7 @@ class TodoInputViewController: UIViewController {
         containerView.transform.ty = -containerView.frame.height
         
         containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor.borderColor().CGColor
+        containerView.layer.borderColor = UIColor.borderColor().cgColor
         
         textField.delegate = self
 
@@ -38,42 +38,42 @@ class TodoInputViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(TodoInputViewController.handleTap(_:)))
-        swipe.direction = .Up
+        swipe.direction = .up
         view.addGestureRecognizer(swipe)
         
         if let todo = todo {
             textField.text = todo.text
-            importantButton.hidden = true
-            urgentButton.hidden = true
+            importantButton.isHidden = true
+            urgentButton.isHidden = true
         }
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
         importantButton.scale = 0
         urgentButton.scale = 0
 
-        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
             self.containerView.transform.ty = 0
         }, completion: nil)
         
-        UIView.animateWithDuration(0.5, delay: 0.15, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.15, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
             self.importantButton.scale = 1
             self.urgentButton.scale = 1
         }, completion: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.textField.becomeFirstResponder()
 
     }
     
-    func handleTap(gesture: UITapGestureRecognizer) {
-        if gesture.state == .Ended {
+    func handleTap(_ gesture: UITapGestureRecognizer) {
+        if gesture.state == .ended {
             close()
         }
     }
@@ -81,46 +81,46 @@ class TodoInputViewController: UIViewController {
     func close() {
         willDismiss?()
         textField.resignFirstResponder()
-        UIView.animateWithDuration(0.5, delay: 0.15, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.15, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
             self.containerView.transform.ty = -self.containerView.frame.height
         }, completion: { finished in
-            self.presentingViewController?.dismissViewControllerAnimated(false, completion: {})
+            self.presentingViewController?.dismiss(animated: false, completion: {})
         })
 
     }
 
     
-    func presentInViewController(viewController: UIViewController) {
-        modalPresentationStyle = .Custom
-        viewController.presentViewController(self, animated: false, completion: {})
+    func presentInViewController(_ viewController: UIViewController) {
+        modalPresentationStyle = .custom
+        viewController.present(self, animated: false, completion: {})
     }
     
-    @IBAction func importantButtonPressed(sender: AnyObject) {
+    @IBAction func importantButtonPressed(_ sender: AnyObject) {
         important = !important
         setButtonSelected(importantButton, selected: important)
     }
     
-    @IBAction func urgentButtonPressed(sender: AnyObject) {
+    @IBAction func urgentButtonPressed(_ sender: AnyObject) {
         urgent = !urgent
         setButtonSelected(urgentButton, selected: urgent)
     }
     
-    func setButtonSelected(button: UIButton, selected: Bool) {
-        button.backgroundColor = selected ? UIColor.primaryColor() : UIColor.whiteColor()
-        button.setTitleColor(selected ? UIColor.whiteColor() : UIColor.primaryColor(), forState: .Normal)
+    func setButtonSelected(_ button: UIButton, selected: Bool) {
+        button.backgroundColor = selected ? UIColor.primaryColor() : UIColor.white
+        button.setTitleColor(selected ? UIColor.white : UIColor.primaryColor(), for: UIControlState())
     }
     
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
 }
 
 extension TodoInputViewController: UITextFieldDelegate {
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        guard let content = textField.text where content != "" else {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let content = textField.text , content != "" else {
             close()
             return true
         }
@@ -129,13 +129,13 @@ extension TodoInputViewController: UITextFieldDelegate {
                 todo.text = content
             })
         } else {
-            var type = Todo.TodoType.Other
+            var type = Todo.TodoType.other
             if (important && urgent) {
-                type = .ImportantAndUrgent
+                type = .importantAndUrgent
             } else if (important) {
-                type = .Important
+                type = .important
             } else if (urgent) {
-                type = .Urgent
+                type = .urgent
             }
             let todo = Todo()
             todo.text = content

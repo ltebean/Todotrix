@@ -16,44 +16,44 @@ class TodoService: NSObject {
     let realm: Realm
     
     override init() {
-        let dir = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier("group.todotrix")!
+        let dir = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.todotrix")!
         let config = Realm.Configuration(
-            fileURL: dir.URLByAppendingPathComponent("db.realm")
+            fileURL: dir.appendingPathComponent("db.realm")
         )
         realm = try! Realm(configuration: config)
         super.init()
     }
 
-    func loadTodosByType(type: Todo.TodoType) -> [Todo] {
+    func loadTodosByType(_ type: Todo.TodoType) -> [Todo] {
         return realm
-            .objects(Todo)
+            .objects(Todo.self)
             .filter("type == \(type.rawValue)")
-            .sorted("order", ascending: false)
+            .sorted(byProperty: "order", ascending: false)
             .flatMap({ e in e})
         
     }
     
-    func addTodo(todo: Todo) {
+    func addTodo(_ todo: Todo) {
         try! realm.write {
             realm.add(todo, update: true)
         }
     }
     
-    func updateTodo(write: (() -> ())) {
+    func updateTodo(_ write: (() -> ())) {
         try! realm.write {
             write()
         }
     }
     
-    func deleteTodo(todo: Todo) {
+    func deleteTodo(_ todo: Todo) {
         try! realm.write {
             realm.delete(todo)
         }
     }
     
-    func resetOrder(todos: [Todo]) {
+    func resetOrder(_ todos: [Todo]) {
         try! realm.write {
-            for (index, todo) in todos.reverse().enumerate() {
+            for (index, todo) in todos.reversed().enumerated() {
                 todo.order = index
             }
         }

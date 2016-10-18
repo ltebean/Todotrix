@@ -13,37 +13,37 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let closeButton = VBFPopFlatButton(frame: CGRectMake(0, 0, 22, 22), buttonType: FlatButtonType.buttonCloseType, buttonStyle: FlatButtonStyle.buttonPlainStyle, animateToInitialState: false)
-        closeButton.lineRadius = 1
-        closeButton.addTarget(self, action: #selector(SettingsViewController.closeButtonPressed(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: closeButton)
+        let closeButton = VBFPopFlatButton(frame: CGRect(x: 0, y: 0, width: 22, height: 22), buttonType: FlatButtonType.buttonCloseType, buttonStyle: FlatButtonStyle.buttonPlainStyle, animateToInitialState: false)
+        closeButton?.lineRadius = 1
+        closeButton?.addTarget(self, action: #selector(SettingsViewController.closeButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: closeButton!)
 
     }
     
-    func closeButtonPressed(button: UIButton) {
-        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    func closeButtonPressed(_ button: UIButton) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 && indexPath.row == 0 {
-            guard let url = NSURL(string:"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=939523047&onlyLatestVersion=true&type=Purple+Software") else {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 && (indexPath as NSIndexPath).row == 0 {
+            guard let url = URL(string:"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=939523047&onlyLatestVersion=true&type=Purple+Software") else {
                 return
             }
-            UIApplication.sharedApplication().openURL(url);
+            UIApplication.shared.openURL(url);
         }
-        else if (indexPath.section == 0 && indexPath.row == 1) {
-            guard let url = NSURL(string:"mailto:yucong1118@gmail.com") else {
+        else if ((indexPath as NSIndexPath).section == 0 && (indexPath as NSIndexPath).row == 1) {
+            guard let url = URL(string:"mailto:yucong1118@gmail.com") else {
                 return
             }
-            if UIApplication.sharedApplication().canOpenURL(url) {
-                UIApplication.sharedApplication().openURL(url)
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.openURL(url)
             }
         }
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 
 }

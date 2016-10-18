@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class TodoAreaView: XibBasedView {
 
-    var todoType: Todo.TodoType = .Other
+    var todoType: Todo.TodoType = .other
     var todos: [Todo] = [] {
         didSet {
             updateUI()
@@ -24,25 +24,25 @@ class TodoAreaView: XibBasedView {
     override func load() {
         super.load()
         layer.borderWidth = 0.5
-        layer.borderColor = UIColor.borderColor().CGColor
+        layer.borderColor = UIColor.borderColor().cgColor
     }
     
     func updateUI() {
         if todos.count == 0 {
             titleLabel.attributedText = "Empty".centeredGrayTitle()
-            moreLabel.hidden = true
+            moreLabel.isHidden = true
         } else {
             titleLabel.attributedText = todos.first!.text.centeredTitle()
-            moreLabel.hidden = todos.count <= 1
+            moreLabel.isHidden = todos.count <= 1
             moreLabel.text = "\(todos.count - 1) more"
         }
     }
     
-    func setHighlighted(highlighted: Bool) {
+    func setHighlighted(_ highlighted: Bool) {
         if highlighted {
-            backgroundColor = UIColor.primaryColor().colorWithAlphaComponent(0.1)
+            backgroundColor = UIColor.primaryColor().withAlphaComponent(0.1)
         } else {
-            backgroundColor = UIColor.whiteColor()
+            backgroundColor = UIColor.white
         }
     }
     

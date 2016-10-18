@@ -13,13 +13,13 @@ class HomeTransitionDelegate: NSObject, UINavigationControllerDelegate {
     var interactiveTransition: UIPercentDrivenInteractiveTransition?
     let transition = HomeTransition()
     
-    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.push = operation == UINavigationControllerOperation.Push
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.push = operation == UINavigationControllerOperation.push
         transition.delegate = self
         return transition
     }
     
-    func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactiveTransition
     }
 }
@@ -33,79 +33,79 @@ class HomeTransition: NSObject, UIViewControllerAnimatedTransitioning, UIGesture
     let zoomMin = CGFloat(0.7)
     let zoomMax = CGFloat(1.5)
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.6
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        let sourceView = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!.view
-        let destinationView = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!.view
-        let containerView = transitionContext.containerView()!
+        let sourceView = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!.view
+        let destinationView = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)!.view
+        let containerView = transitionContext.containerView
         
-        let duration = transitionDuration(transitionContext)
+        let duration = transitionDuration(using: transitionContext)
         
-        destinationView.alpha = 0
+        destinationView?.alpha = 0
         
         if (push) {
-            destinationView.transform = CGAffineTransformMakeScale(zoomMax, zoomMax)
-            controllerToPop = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-            handleBack(destinationView)
+            destinationView?.transform = CGAffineTransform(scaleX: zoomMax, y: zoomMax)
+            controllerToPop = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
+            handleBack(destinationView!)
         } else {
-            destinationView.transform = CGAffineTransformMakeScale(zoomMin, zoomMin)
+            destinationView?.transform = CGAffineTransform(scaleX: zoomMin, y: zoomMin)
         }
-        containerView.addSubview(destinationView)
-        UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
-                sourceView.alpha = 0
-                destinationView.alpha = 1
+        containerView.addSubview(destinationView!)
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0, options: [], animations: {
+                sourceView?.alpha = 0
+                destinationView?.alpha = 1
                 if (self.push) {
-                    sourceView.transform = CGAffineTransformMakeScale(self.zoomMin, self.zoomMin)
+                    sourceView?.transform = CGAffineTransform(scaleX: self.zoomMin, y: self.zoomMin)
                 } else {
-                    sourceView.transform = CGAffineTransformMakeScale(self.zoomMax, self.zoomMax)
+                    sourceView?.transform = CGAffineTransform(scaleX: self.zoomMax, y: self.zoomMax)
                 }
             
-                destinationView.transform = CGAffineTransformIdentity
+                destinationView?.transform = CGAffineTransform.identity
             }, completion: { finished in
                 
-                sourceView.alpha = 1
-                sourceView.transform = CGAffineTransformIdentity
-                destinationView.alpha = 1
-                destinationView.transform = CGAffineTransformIdentity
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                sourceView?.alpha = 1
+                sourceView?.transform = CGAffineTransform.identity
+                destinationView?.alpha = 1
+                destinationView?.transform = CGAffineTransform.identity
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 
             }
         )
 
     }
     
-    func handleBack(view: UIView) {
+    func handleBack(_ view: UIView) {
         let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(HomeTransition.handlePan))
-        gesture.edges = .Left
+        gesture.edges = .left
 //        gesture.delegate = self
         view.addGestureRecognizer(gesture)
     }
     
-    func handlePan(gesture: UIScreenEdgePanGestureRecognizer) {
-        let progress = gesture.translationInView(gesture.view).x / UIScreen.mainScreen().bounds.width
+    func handlePan(_ gesture: UIScreenEdgePanGestureRecognizer) {
+        let progress = gesture.translation(in: gesture.view).x / UIScreen.main.bounds.width
 
-        if gesture.state == .Began {
+        if gesture.state == .began {
             delegate.interactiveTransition = UIPercentDrivenInteractiveTransition()
-            controllerToPop.navigationController?.popViewControllerAnimated(true)
+            controllerToPop.navigationController?.popViewController(animated: true)
         }
-        else if gesture.state == .Changed {
-            delegate.interactiveTransition?.updateInteractiveTransition(progress)
+        else if gesture.state == .changed {
+            delegate.interactiveTransition?.update(progress)
         }
-        else if gesture.state == .Ended || gesture.state == .Cancelled {
+        else if gesture.state == .ended || gesture.state == .cancelled {
             if progress > 0.3 {
-                delegate.interactiveTransition?.finishInteractiveTransition()
+                delegate.interactiveTransition?.finish()
             } else {
-                delegate.interactiveTransition?.cancelInteractiveTransition()
+                delegate.interactiveTransition?.cancel()
             }
             delegate.interactiveTransition = nil
         }
     }
     
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 }

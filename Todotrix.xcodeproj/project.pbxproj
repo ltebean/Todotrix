@@ -265,14 +265,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B321785D1CF40471001DD171 /* Build configuration list for PBXNativeTarget "Todotrix" */;
 			buildPhases = (
-				9B9237A4A5664A89B9587B50 /* 📦 Check Pods Manifest.lock */,
+				9B9237A4A5664A89B9587B50 /* [CP] Check Pods Manifest.lock */,
 				B32178751CF429B6001DD171 /* R.swift */,
 				B32178471CF40471001DD171 /* Sources */,
 				B32178481CF40471001DD171 /* Frameworks */,
 				B32178491CF40471001DD171 /* Resources */,
 				B3A68C7F1D2BAD0000A158F3 /* ShellScript */,
-				94CDB73BABD48F99EFCEB8CE /* 📦 Embed Pods Frameworks */,
-				75AE1FF66ECAA172B2E26093 /* 📦 Copy Pods Resources */,
+				94CDB73BABD48F99EFCEB8CE /* [CP] Embed Pods Frameworks */,
+				75AE1FF66ECAA172B2E26093 /* [CP] Copy Pods Resources */,
 				B3A68C941D2BB22700A158F3 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -289,11 +289,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3A68C911D2BB22700A158F3 /* Build configuration list for PBXNativeTarget "TodotrixTodayExtension" */;
 			buildPhases = (
-				1F0DFBDDF6ED17F4F3A81497 /* 📦 Check Pods Manifest.lock */,
+				1F0DFBDDF6ED17F4F3A81497 /* [CP] Check Pods Manifest.lock */,
 				B3A68C801D2BB22700A158F3 /* Sources */,
 				B3A68C811D2BB22700A158F3 /* Frameworks */,
 				B3A68C821D2BB22700A158F3 /* Resources */,
-				8859D49DAB501A4CE3E923BD /* 📦 Copy Pods Resources */,
+				8859D49DAB501A4CE3E923BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,6 +317,8 @@
 					B321784A1CF40471001DD171 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = LUAG5Z5ST3;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -326,6 +328,8 @@
 					B3A68C831D2BB22700A158F3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = LUAG5Z5ST3;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -377,29 +381,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F0DFBDDF6ED17F4F3A81497 /* 📦 Check Pods Manifest.lock */ = {
+		1F0DFBDDF6ED17F4F3A81497 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		75AE1FF66ECAA172B2E26093 /* 📦 Copy Pods Resources */ = {
+		75AE1FF66ECAA172B2E26093 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,14 +411,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8859D49DAB501A4CE3E923BD /* 📦 Copy Pods Resources */ = {
+		8859D49DAB501A4CE3E923BD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,14 +426,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodotrixTodayExtension/Pods-TodotrixTodayExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94CDB73BABD48F99EFCEB8CE /* 📦 Embed Pods Frameworks */ = {
+		94CDB73BABD48F99EFCEB8CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,19 +441,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B9237A4A5664A89B9587B50 /* 📦 Check Pods Manifest.lock */ = {
+		9B9237A4A5664A89B9587B50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B32178751CF429B6001DD171 /* R.swift */ = {
@@ -641,6 +645,7 @@
 				CODE_SIGN_ENTITLEMENTS = Todotrix/Todotrix.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LUAG5Z5ST3;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Todotrix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -651,6 +656,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Todotrix/Todotrix-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -662,15 +668,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Todotrix/Todotrix.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LUAG5Z5ST3;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Todotrix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bb82dcab-7dfb-4430-b539-957bcd060888";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Todotrix/Todotrix-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -690,6 +699,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -700,15 +710,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TodotrixTodayExtension/TodotrixTodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cong Yu (LUAG5Z5ST3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = TodotrixTodayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.ltebean.todo.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "23872f4f-48e4-426e-ad43-15f19eb3b1f2";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

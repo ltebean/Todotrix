@@ -11,17 +11,17 @@ import TextAttributes
 
 public extension NSAttributedString {
     
-    func heightWithConstrainedWidth(width: CGFloat) -> CGFloat {
-        let boundingSize = CGSize(width: width, height: CGFloat.max)
-        let options = NSStringDrawingOptions.UsesLineFragmentOrigin
-        let size = boundingRectWithSize(boundingSize, options: options, context: nil)
+    func heightWithConstrainedWidth(_ width: CGFloat) -> CGFloat {
+        let boundingSize = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        let options = NSStringDrawingOptions.usesLineFragmentOrigin
+        let size = boundingRect(with: boundingSize, options: options, context: nil)
         return ceil(size.height)
     }
 }
 
 public extension String {
     
-    func attributedTitle(color color: UIColor , alignment: NSTextAlignment) -> NSAttributedString {
+    func attributedTitle(color: UIColor , alignment: NSTextAlignment) -> NSAttributedString {
         let attrs = TextAttributes()
             .font(UIFont.defaultFont(size: 17))
             .foregroundColor(color)
@@ -32,14 +32,14 @@ public extension String {
     }
     
     func title() -> NSAttributedString {
-        return attributedTitle(color: UIColor.blackColor(), alignment: .Left)
+        return attributedTitle(color: UIColor.black, alignment: .left)
     }
     
     func centeredTitle() -> NSAttributedString {
-        return attributedTitle(color: UIColor.blackColor(), alignment: .Center)
+        return attributedTitle(color: UIColor.black, alignment: .center)
     }
     
     func centeredGrayTitle() -> NSAttributedString {
-        return attributedTitle(color: UIColor(hex: 0xdddddd), alignment: .Center)
+        return attributedTitle(color: UIColor(hex: 0xdddddd), alignment: .center)
     }
 }

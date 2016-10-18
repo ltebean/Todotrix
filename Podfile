@@ -4,11 +4,11 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Todotrix' do
-pod 'R.swift', '2.1.0'
+pod 'R.swift'
 pod 'LTUIKit'
 pod 'LTSwiftDate'
 pod 'TextAttributes'
-pod 'RealmSwift', '1.0.1'
+pod 'RealmSwift'
 pod 'HPReorderTableView'
 pod 'VBFPopFlatButton'
 pod 'Fabric'
@@ -17,7 +17,7 @@ pod 'Heap'
 end
 
 target 'TodotrixTodayExtension' do
-pod 'RealmSwift', '1.0.1'
+pod 'RealmSwift'
 end
 
 post_install do |installer|
