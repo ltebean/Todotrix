@@ -5,7 +5,6 @@ use_frameworks!
 
 target 'Todotrix' do
 pod 'R.swift'
-pod 'LTUIKit'
 pod 'LTSwiftDate'
 pod 'TextAttributes'
 pod 'RealmSwift'

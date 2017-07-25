@@ -5,7 +5,6 @@ PODS:
   - Heap (3.0.0)
   - HPReorderTableView (0.2)
   - LTSwiftDate (1.0.0)
-  - LTUIKit (0.1.0)
   - pop (1.0.9)
   - R.swift (3.1.0):
     - R.swift.Library (~> 3.0.2)
@@ -25,7 +24,6 @@ DEPENDENCIES:
   - Heap
   - HPReorderTableView
   - LTSwiftDate
-  - LTUIKit
   - R.swift
   - RealmSwift
   - TextAttributes
@@ -37,7 +35,6 @@ SPEC CHECKSUMS:
   Heap: b95bc7a21f47ddd470e8ebccefa59c91f4fe1d68
   HPReorderTableView: fbecadc7f8b2d5a138d976aa5fe6fbb09524022a
   LTSwiftDate: 7b5c5abedaf48ad5f8bb75b4d7cbc0c565ac576a
-  LTUIKit: a2ea10f50d780c81e8f1defd9f646b874ae2da6f
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   R.swift: 14400e5784224d1e4e59a8fc5549198c7e8fe360
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
@@ -46,6 +43,6 @@ SPEC CHECKSUMS:
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
   VBFPopFlatButton: 39e48ab56277f3d056734a9b5ec5d0cc60d69778
 
-PODFILE CHECKSUM: dc6f821f358e56bda78408a4837b3c5167a91fb8
+PODFILE CHECKSUM: f1b39a50f7b35a99a6401b2a2b76ff3b9ca6607d
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.2.1

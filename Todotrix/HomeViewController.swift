@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var area2: TodoAreaView!
     @IBOutlet weak var area3: TodoAreaView!
     @IBOutlet weak var area4: TodoAreaView!
+    @IBOutlet weak var centerArea: DesignableView!
     
     var menuButton: VBFPopFlatButton!
     var inputButton: VBFPopFlatButton!
@@ -63,6 +64,8 @@ class HomeViewController: UIViewController {
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(HomeViewController.handleSwipe(_:)))
         swipe.direction = .down
         view.addGestureRecognizer(swipe)
+        
+        centerArea.alpha = 0
 
     }
     
@@ -130,6 +133,9 @@ extension HomeViewController {
         }).first else {
             return
         }
+        guard area.todos.count > 0 else {
+            return
+        }
         goToList(area.todoType, todos: area.todos)
     }
     
@@ -155,7 +161,9 @@ extension HomeViewController {
             area.titleLabel.alpha = 0
             area.todos.removeFirst()
             
+            centerArea.backgroundColor = UIColor.white
             UIView.animate(withDuration: 0.2, animations: {
+                self.centerArea.alpha = 1
                 self.snapshotView.scale = 1.15
                 area.setHighlighted(true)
             })
@@ -166,40 +174,66 @@ extension HomeViewController {
             
         }
         else if gesture.state == .changed {
-            areaViews.forEach({ area in
-                let contains = area.frame.contains(location)
-                area.setHighlighted(contains)
-                UIView.animate(withDuration: 0.3, animations: {
-                    area.titleLabel.alpha = contains ? 0 : 1
+            
+            if centerArea.frame.contains(location) {
+                centerArea.backgroundColor = UIColor(hex: 0xE7FDEA)
+                areaViews.forEach({ area in
+                    let contains = false
+                    area.setHighlighted(contains)
+                    UIView.animate(withDuration: 0.3, animations: {
+                        area.titleLabel.alpha = contains ? 0 : 1
+                    })
                 })
-            })
+            } else {
+                centerArea.backgroundColor = UIColor.white
+                areaViews.forEach({ area in
+                    let contains = area.frame.contains(location)
+                    area.setHighlighted(contains)
+                    UIView.animate(withDuration: 0.3, animations: {
+                        area.titleLabel.alpha = contains ? 0 : 1
+                    })
+                })
+            }
+            
             snapshotView.center.x = location.x - startLocation.x + startCenter.x
             snapshotView.center.y = location.y - startLocation.y + startCenter.y
         }
         else if gesture.state == .ended {
-            
-            let area = areaViews.filter({ area in
-                area.frame.contains(location)
-            }).first!
-            
-            service.updateTodo({
-                self.todoDragging.type = area.todoType.rawValue
-            })
-            area.todos.insert(todoDragging, at: 0)
-            
-            UIView.animate(
-                withDuration: 0.3,
-                animations: {
-                    area.setHighlighted(false)
-                    self.snapshotView.center = self.view.convert(area.titleLabel.center, from: area.titleLabel.superview)
-                    self.snapshotView.scale = 1
-                },
-                completion: { finished in
-                    area.titleLabel.alpha = 1
+  
+            if centerArea.frame.contains(location) {
+                service.deleteTodo(todoDragging)
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.snapshotView.center = self.centerArea.center
+                    self.snapshotView.scale = 0.01
+                    self.centerArea.alpha = 0
+                }, completion: { finished in
                     self.snapshotView.removeFromSuperview()
                     self.snapshotView = nil
-                }
-            )
+                })
+            } else {
+                
+                let area = areaViews.filter({ area in
+                    area.frame.contains(location)
+                }).first!
+                
+                service.updateTodo({
+                    self.todoDragging.type = area.todoType.rawValue
+                })
+                area.todos.insert(todoDragging, at: 0)
+                
+                UIView.animate(
+                    withDuration: 0.3,
+                    animations: {
+                        area.setHighlighted(false)
+                        self.centerArea.alpha = 0
+                        self.snapshotView.center = self.view.convert(area.titleLabel.center, from: area.titleLabel.superview)
+                        self.snapshotView.scale = 1
+                }, completion: { finished in
+                        area.titleLabel.alpha = 1
+                        self.snapshotView.removeFromSuperview()
+                        self.snapshotView = nil
+                })
+            }
         }
     }
 }

@@ -40,6 +40,8 @@
 		B3A68C961D2BB71000A158F3 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321787B1CF4313F001DD171 /* Todo.swift */; };
 		B3A68C971D2BB71000A158F3 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68C5E1D2A4F4000A158F3 /* TodoService.swift */; };
 		B3A68C981D2BBB2E00A158F3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32178621CF428C0001DD171 /* UIColor.swift */; };
+		B3C2D05E1F26DCFC00AB41C9 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2D05C1F26DCFC00AB41C9 /* DesignableButton.swift */; };
+		B3C2D05F1F26DCFC00AB41C9 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2D05D1F26DCFC00AB41C9 /* DesignableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		B3A68C8B1D2BB22700A158F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B3A68C8D1D2BB22700A158F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A68C951D2BB26D00A158F3 /* TodotrixTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TodotrixTodayExtension.entitlements; sourceTree = "<group>"; };
+		B3C2D05C1F26DCFC00AB41C9 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		B3C2D05D1F26DCFC00AB41C9 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		E3F805A43EFD7EC07703F47A /* Pods-Todotrix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todotrix.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todotrix/Pods-Todotrix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +197,8 @@
 		B32178601CF428A1001DD171 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				B3C2D05C1F26DCFC00AB41C9 /* DesignableButton.swift */,
+				B3C2D05D1F26DCFC00AB41C9 /* DesignableView.swift */,
 				B321786E1CF42921001DD171 /* NavigationController.swift */,
 				B32178671CF428CA001DD171 /* XibBasedView.swift */,
 				B32178611CF428C0001DD171 /* FileManager.swift */,
@@ -393,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		75AE1FF66ECAA172B2E26093 /* [CP] Copy Pods Resources */ = {
@@ -453,7 +459,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B32178751CF429B6001DD171 /* R.swift */ = {
@@ -493,6 +499,7 @@
 				B321787C1CF4313F001DD171 /* Todo.swift in Sources */,
 				B3A68C611D2A57DB00A158F3 /* TodoInputViewController.swift in Sources */,
 				B32178641CF428C0001DD171 /* FileManager.swift in Sources */,
+				B3C2D05E1F26DCFC00AB41C9 /* DesignableButton.swift in Sources */,
 				B3A68C711D2B57D400A158F3 /* HomeTransition.swift in Sources */,
 				B321786F1CF42921001DD171 /* NavigationController.swift in Sources */,
 				B3A68C5F1D2A4F4000A158F3 /* TodoService.swift in Sources */,
@@ -500,6 +507,7 @@
 				B321786D1CF428F2001DD171 /* R.generated.swift in Sources */,
 				B32178651CF428C0001DD171 /* UIColor.swift in Sources */,
 				B32178741CF42963001DD171 /* HomeViewController.swift in Sources */,
+				B3C2D05F1F26DCFC00AB41C9 /* DesignableView.swift in Sources */,
 				B3A68C631D2A612900A158F3 /* TodoListViewController.swift in Sources */,
 				B32178661CF428C0001DD171 /* UIFont.swift in Sources */,
 				B32178681CF428CA001DD171 /* XibBasedView.swift in Sources */,

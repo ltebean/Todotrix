@@ -53,8 +53,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
+    /// Image `icon-checkmark`.
+    static let iconCheckmark = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon-checkmark")
+    
+    /// `UIImage(named: "icon-checkmark", bundle: ..., traitCollection: ...)`
+    static func iconCheckmark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.iconCheckmark, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -172,6 +180,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "icon-checkmark") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon-checkmark' is used in storyboard 'Home', but couldn't be loaded.") }
         if _R.storyboard.home().list() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'list' could not be loaded from storyboard 'Home' as 'TodoListViewController'.") }
         if _R.storyboard.home().input() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'input' could not be loaded from storyboard 'Home' as 'TodoInputViewController'.") }
         if _R.storyboard.home().home() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'home' could not be loaded from storyboard 'Home' as 'HomeViewController'.") }
