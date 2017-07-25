@@ -22,6 +22,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // Do any additional setup after loading the view from its nib.
         tableView.dataSource = self
         tableView.delegate = self
+        if #available(iOSApplicationExtension 10.0, *) {
+            self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,11 +74,14 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+        
+        let view = UIView(frame: CGRect(x: 0, y: 30, width: 200, height: 20))
+        let label = UILabel(frame: CGRect(x: 15, y: 13, width: 200, height: 16))
         label.textColor = UIColor.primaryColor()
         label.font = UIFont.systemFont(ofSize: 14)
         label.text = data[section].type.description()
-        return label
+        view.addSubview(label)
+        return view
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

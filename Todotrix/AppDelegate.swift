@@ -90,6 +90,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         t.text = "Long press then you can move this todo to other quadrant"
         service.addTodo(t)
         
+        t = Todo()
+        t.type = Todo.TodoType.urgent.rawValue
+        t.text = "Finish a todo by dragging it to the center"
+        service.addTodo(t)
+        
     }
     
     fileprivate func migrateData() {
