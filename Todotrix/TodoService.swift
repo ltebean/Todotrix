@@ -28,7 +28,7 @@ class TodoService: NSObject {
         return realm
             .objects(Todo.self)
             .filter("type == \(type.rawValue)")
-            .sorted(byProperty: "order", ascending: false)
+            .sorted(byKeyPath: "order", ascending: false)
             .flatMap({ e in e})
         
     }

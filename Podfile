@@ -7,7 +7,7 @@ target 'Todotrix' do
 pod 'R.swift'
 pod 'LTSwiftDate'
 pod 'TextAttributes'
-pod 'RealmSwift'
+pod 'RealmSwift', '3.13.1'
 pod 'HPReorderTableView'
 pod 'VBFPopFlatButton'
 pod 'Fabric'
@@ -16,7 +16,7 @@ pod 'Heap'
 end
 
 target 'TodotrixTodayExtension' do
-pod 'RealmSwift'
+    pod 'RealmSwift', '3.13.1'
 end
 
 post_install do |installer|

@@ -32,19 +32,41 @@ class TodoListViewController: UIViewController {
     let service = TodoService.sharedInstance
 
     var todos: [Todo] = []
+    var counter = 1
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        timer = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+    }
+    
+    func update() {
+        let todo = Todo()
+        todo.text = UUID().uuidString
+        todo.type = todos[0].type
+        todos.append(todo)
+        tableView.reloadData()
+        tableView.layoutIfNeeded()
+        //        DispatchQueue.main.async {
+        self.tableView.scrollToRow(at: IndexPath(row: self.todos.count - 1, section: 0), at: .top, animated: true)
+        
+        //        }
     }
     
 }
